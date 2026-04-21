@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, Platform } from 'react-native'
 import photo from "../assets/image/logo_dark.png"
 import React from 'react'
 
@@ -14,7 +14,7 @@ const home = () => {
         Hii
       </Text>
 
-      <Text style={[design.t2], {color:"#ff39ae"}}>Welcome to the Home Screen!</Text>
+      <Text style={[design.t2, {color:"#ff39ae"}]}>Welcome to the Home Screen!</Text>
 
       <View style={design.aCard}>
         <Text>
@@ -48,7 +48,13 @@ const design = StyleSheet.create({
     backgroundColor: '#04f8bf',
     padding: 30,
     borderRadius: 10,
-    boxShadow: '4px, 8px, rgba(0,0,0,0.5)'
+    // Native shadow properties (iOS)
+    shadowColor: '#000',
+    shadowOffset: { width: 4, height: 8 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    // Android shadow
+    elevation: 8,
   },
   picture:{
     marginVertical: 30
