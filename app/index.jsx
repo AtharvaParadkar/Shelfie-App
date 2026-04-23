@@ -1,4 +1,6 @@
 import { StyleSheet, Text, View, Image, Platform } from 'react-native'
+import { Link } from 'expo-router'
+
 import photo from "../assets/image/logo_dark.png"
 import React from 'react'
 
@@ -7,20 +9,25 @@ const home = () => {
   return (
     <View style={design.container}>
 
-      <Image source={photo} style={design.picture}/>
+      <Image source={photo} style={design.picture} />
 
-      <Text style={design.t1}>Home</Text>
-      <Text style={{ marginTop: 10, marginBottom: 20 }}>
+      <Text style={design.t1}>The Number 1</Text>
+
+
+      {/* <Text style={{ marginTop: 10, marginBottom: 20 }}>
         Hii
-      </Text>
+      </Text> */}
 
-      <Text style={[design.t2, {color:"#ff39ae"}]}>Welcome to the Home Screen!</Text>
+      <Text style={[design.t2, { color: "#ff39ae" }]}>Reading List App</Text>
 
-      <View style={design.aCard}>
+      {/* <View style={design.aCard}>
         <Text>
           A card!
         </Text>
-      </View>
+      </View> */}
+
+      <Link href='/about' style={design.link}>About Page</Link>
+      <Link href='/contact' style={design.link}>Contact Page</Link>
 
     </View>
   )
@@ -38,10 +45,11 @@ const design = StyleSheet.create({
   t1: {
     color: "#ffffff",
     fontWeight: "bold",
-    fontSize: 30
+    fontSize: 20
   },
   t2: {
     fontSize: 10,
+    marginBottom: 10,
     marginBottom: 10
   },
   aCard: {
@@ -56,7 +64,11 @@ const design = StyleSheet.create({
     // Android shadow
     elevation: 8,
   },
-  picture:{
-    marginVertical: 30
+  picture: {
+    marginVertical: 10
+  },
+  link: {
+    marginVertical: 10,
+    borderBottomWidth: 1
   }
 })
