@@ -1,24 +1,28 @@
-import { StyleSheet, Text, View, Image, Platform } from 'react-native'
+import { StyleSheet, Text, View, Image, Platform, useColorScheme } from 'react-native'
 import { Link } from 'expo-router'
 
 import photo from "../assets/image/logo_dark.png"
 import React from 'react'
+import { Colors } from '../constants/Colors';
 
 //? Home component to display the home screen of the app
 const home = () => {
+  const colorScheme = useColorScheme();
+  const theme = Colors[colorScheme] ?? Colors.dark
+
   return (
-    <View style={design.container}>
+    <View style={[design.container, { backgroundColor: theme.background }]}>
 
       <Image source={photo} style={design.picture} />
 
-      <Text style={design.t1}>The Number 1</Text>
+      <Text style={[design.t1, { color: theme.title }]}>The Number 1</Text>
 
 
       {/* <Text style={{ marginTop: 10, marginBottom: 20 }}>
         Hii
       </Text> */}
 
-      <Text style={[design.t2, { color: "#ff39ae" }]}>Reading List App</Text>
+      <Text style={[design.t2, { color: theme.text }]}>Reading List App</Text>
 
       {/* <View style={design.aCard}>
         <Text>
