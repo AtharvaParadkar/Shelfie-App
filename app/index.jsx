@@ -8,6 +8,7 @@ import ThemedView from '../components/ThemedView';
 import ThemedCard from '../components/ThemedCard';
 import ThemedLogo from '../components/ThemedLogo';
 import ThemedText from '../components/ThemedText';
+import Spacer from '../components/Spacer';
 
 //? Home component to display the home screen of the app
 const home = () => {
@@ -18,6 +19,8 @@ const home = () => {
     <ThemedView style={design.container}>
 
       <ThemedLogo style={design.picture} />
+
+      <Spacer />
 
       <ThemedText style={StyleSheet.title} title = {true}>The Number 1</ThemedText>
 
@@ -45,7 +48,7 @@ export default home
 
 const design = StyleSheet.create({
   container: {
-    backgroundColor: "#017390",
+    // backgroundColor: "#017390",
     flex: 1,
     alignItems: "center",
     justifyContent: 'center'
