@@ -6,6 +6,7 @@ import React from 'react'
 import { Colors } from '../constants/Colors';
 import ThemedView from '../components/ThemedView';
 import ThemedCard from '../components/ThemedCard';
+import ThemedLogo from '../components/ThemedLogo';
 
 //? Home component to display the home screen of the app
 const home = () => {
@@ -15,7 +16,7 @@ const home = () => {
   return (
     <ThemedView style={[design.container, { backgroundColor: theme.background }]}>
 
-      <Image source={photo} style={design.picture} />
+      <ThemedLogo style={design.picture} />
 
       <Text style={[design.t1, { color: theme.title }]}>The Number 1</Text>
 
