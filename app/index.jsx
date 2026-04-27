@@ -5,6 +5,7 @@ import photo from "../assets/image/logo_dark.png"
 import React from 'react'
 import { Colors } from '../constants/Colors';
 import ThemedView from '../components/ThemedView';
+import ThemedCard from '../components/ThemedCard';
 
 //? Home component to display the home screen of the app
 const home = () => {
@@ -25,11 +26,11 @@ const home = () => {
 
       <Text style={[design.t2, { color: theme.text }]}>Reading List App</Text>
 
-      {/* <View style={design.aCard}>
+      <ThemedCard >
         <Text>
           A card!
         </Text>
-      </View> */}
+      </ThemedCard>
 
       <Link href='/about' style={design.link}>About Page</Link>
       <Link href='/contact' style={design.link}>Contact Page</Link>
