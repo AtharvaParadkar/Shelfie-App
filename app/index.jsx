@@ -4,6 +4,7 @@ import { Link } from 'expo-router'
 import photo from "../assets/image/logo_dark.png"
 import React from 'react'
 import { Colors } from '../constants/Colors';
+import ThemedView from '../components/ThemedView';
 
 //? Home component to display the home screen of the app
 const home = () => {
@@ -11,7 +12,7 @@ const home = () => {
   const theme = Colors[colorScheme] ?? Colors.dark
 
   return (
-    <View style={[design.container, { backgroundColor: theme.background }]}>
+    <ThemedView style={[design.container, { backgroundColor: theme.background }]}>
 
       <Image source={photo} style={design.picture} />
 
@@ -33,7 +34,7 @@ const home = () => {
       <Link href='/about' style={design.link}>About Page</Link>
       <Link href='/contact' style={design.link}>Contact Page</Link>
 
-    </View>
+    </ThemedView>
   )
 }
 
