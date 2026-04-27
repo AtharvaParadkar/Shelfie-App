@@ -7,6 +7,7 @@ import { Colors } from '../constants/Colors';
 import ThemedView from '../components/ThemedView';
 import ThemedCard from '../components/ThemedCard';
 import ThemedLogo from '../components/ThemedLogo';
+import ThemedText from '../components/ThemedText';
 
 //? Home component to display the home screen of the app
 const home = () => {
@@ -14,27 +15,27 @@ const home = () => {
   const theme = Colors[colorScheme] ?? Colors.dark
 
   return (
-    <ThemedView style={[design.container, { backgroundColor: theme.background }]}>
+    <ThemedView style={design.container}>
 
       <ThemedLogo style={design.picture} />
 
-      <Text style={[design.t1, { color: theme.title }]}>The Number 1</Text>
+      <ThemedText style={StyleSheet.title} title = {true}>The Number 1</ThemedText>
 
-
-      {/* <Text style={{ marginTop: 10, marginBottom: 20 }}>
-        Hii
-      </Text> */}
-
-      <Text style={[design.t2, { color: theme.text }]}>Reading List App</Text>
+      <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>Reading List App</ThemedText>
 
       <ThemedCard >
-        <Text>
+        <ThemedText>
           A card!
-        </Text>
+        </ThemedText>
       </ThemedCard>
 
-      <Link href='/about' style={design.link}>About Page</Link>
-      <Link href='/contact' style={design.link}>Contact Page</Link>
+      <Link href='/about' style={design.link}>
+        <ThemedText>About Page</ThemedText>
+      </Link>
+
+      <Link href='/contact' style={design.link}>
+        <ThemedText>Contact Page</ThemedText>
+      </Link>
 
     </ThemedView>
   )
