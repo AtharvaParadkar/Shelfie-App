@@ -21,12 +21,12 @@ const home = () => {
 
       {/* <ThemedCard > <ThemedText> A card! </ThemedText> </ThemedCard> */}
 
-      <Link href='/about' style={design.link}>
-        <ThemedText>About Page</ThemedText>
+      <Link href='/login' style={design.link}>
+        <ThemedText>Loign Page</ThemedText>
       </Link>
 
-      <Link href='/contact' style={design.link}>
-        <ThemedText>Contact Page</ThemedText>
+      <Link href='/register' style={design.link}>
+        <ThemedText>Register Page</ThemedText>
       </Link>
 
     </ThemedView>
