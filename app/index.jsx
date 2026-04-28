@@ -7,6 +7,9 @@ import ThemedLogo from '../components/ThemedLogo';
 import ThemedText from '../components/ThemedText';
 import Spacer from '../components/Spacer';
 
+//! adb reverse tcp:8081 tcp:8081
+//* to run before running in actual device
+
 //? Home component to display the home screen of the app
 const home = () => {
   return (
