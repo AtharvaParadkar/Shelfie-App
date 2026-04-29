@@ -32,6 +32,10 @@ const home = () => {
         <ThemedText>Register Page</ThemedText>
       </Link>
 
+      <Link href='/profile' style={design.link}>
+        <ThemedText>Profile Page</ThemedText>
+      </Link>
+
     </ThemedView>
   )
 }
