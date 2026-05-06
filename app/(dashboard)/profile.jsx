@@ -10,6 +10,14 @@ const profile = () => {
 
     const { logout, user } = useUser()
 
+    if (!user) {
+        return (
+            <ThemedView style={styles.container}>
+                <ThemedText>Loading profile...</ThemedText>
+            </ThemedView>
+        )
+    }
+
     return (
         <ThemedView style={styles.container} >
 
@@ -21,7 +29,7 @@ const profile = () => {
             <ThemedText> Time to start reading some books...</ThemedText>
             <Spacer />
 
-            <ThemedButton onPress={logout}>
+            <ThemedButton onPress={logout} style={styles.button}>
                 <Text style={{ color: '$f2f2f2' }}>Logout</Text>
             </ThemedButton>
 
