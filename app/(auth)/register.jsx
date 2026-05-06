@@ -6,14 +6,19 @@ import { Link } from 'expo-router'
 import { useState } from 'react'
 import ThemedButton from '../../components/ThemedButton'
 import ThemedTextInput from '../../components/ThemedTextInput'
+import { useUser } from '../../hooks/useUser'
 
 const Register = () => {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
+    const { register } = useUser()
+
     const handleRegister = async () => {
-        console.log('Register form submitted', email, password)
+        try {
+            await register(email, password)
+        } catch (error) { }
     }
 
     return (
