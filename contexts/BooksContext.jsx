@@ -29,7 +29,14 @@ export function BooksProvider({ children }) {
     }
 
     async function fetchBookById(id) {
-        try { } catch (eror) {
+        try {
+            const response = await databases.getDocument(
+                DATABASE_ID,
+                COLLECTION_ID,
+                id
+            )
+            return response
+        } catch (eror) {
             console.error(eror.message)
         }
     }
